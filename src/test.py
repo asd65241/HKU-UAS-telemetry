@@ -6,7 +6,7 @@ __email__ = "your email"
 import unittest
 import time
 import dronekit_sitl
-from telemetry import connection, get_gps, disconnection
+from telemetry import Drone
 
 # SITL
 print("Start simulator (SITL)")
@@ -15,15 +15,16 @@ connection_string = sitl.connection_string()
 
 
 # Test code
-drone1 = connection(connection_string)
+drone1 = Drone()
+drone1.connection(connection_string)
 
 for i in range(5):
-    gps1 = get_gps(drone1)
+    gps1 = drone1.get_gps()
     time.sleep(1)
 
 print("last gps: %s" %gps1)
 
-disconnection(drone1)
+drone1.disconnection()
 
 
 

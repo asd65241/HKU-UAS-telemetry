@@ -5,4 +5,4 @@ __email__ = "your-email"
 __all__ = ['tele']
 
 import logging
-from telemetry.tele import connection, get_gps, disconnection
+from telemetry.tele import Drone

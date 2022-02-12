@@ -1,5 +1,9 @@
-# Package Name
-Description
+# HKU-UAS-telemetry
+This script is used to connect the vehicle and get the GPS information of the vehicle.
+
+**Quick Start:**
+1. Initialize a python virtual environment by 'pipenv shell'
+2. Install the package by 'pip install .'
 
 **Usage:**
 ```
