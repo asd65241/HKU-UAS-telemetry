@@ -8,27 +8,30 @@ import time
 import dronekit_sitl
 from telemetry import Drone
 
-# SITL
-print("Start simulator (SITL)")
-sitl = dronekit_sitl.start_default()
-connection_string = sitl.connection_string()
+"""
 
+To get your connection string, do
+
+ls /dev/tty*.* 
+
+"""
 
 # Test code
-drone1 = Drone()
-drone1.connection(connection_string)
+drone = Drone()
+drone.connection("/dev/tty.usbmodem01")
 
-for i in range(5):
-    gps1 = drone1.get_gps()
+while True:
+    # gps = drone.get_gps()
+    # print(gps)
+
+    # # Battery
+    # battery_status = drone.get_battery_level()
+    # print(battery_status)
+
+    # # Status
+    # status = drone.get_status()
+    # print(status)
+
+    print(drone.drone.heading)
+
     time.sleep(1)
-
-print("last gps: %s" %gps1)
-
-drone1.disconnection()
-
-
-
-
-# Shut down simulator
-sitl.stop()
-print("Completed")

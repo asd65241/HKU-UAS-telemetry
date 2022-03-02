@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/package_name.egg-info/PKG-INFO
+src/package_name.egg-info/SOURCES.txt
+src/package_name.egg-info/dependency_links.txt
+src/package_name.egg-info/not-zip-safe
+src/package_name.egg-info/requires.txt
+src/package_name.egg-info/top_level.txt
+src/telemetry/__init__.py
+src/telemetry/tele.py
